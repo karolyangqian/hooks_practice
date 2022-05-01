@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import { apiCall } from '../service';
 import {API_URL} from '../constants'
 import { StyledDiv } from '../components/StyledDiv.style';
@@ -18,7 +18,7 @@ interface IState {
 
 export function Characters(props:any) {
     const [user, setUser] = useState<IState>()
-    React.useEffect(() => {
+    useEffect(() => {
       apiCall(API_URL.users+'/'+props.index)
         .then((data: any) => {
             let temp = {

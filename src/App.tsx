@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react';
 import './App.css';
 import { Homepage } from './pages/Homepage';
 import { Route, Routes } from 'react-router-dom';
 import { Characters } from './pages/Character';
-import { apiCall } from './service';
-import { API_URL } from './constants';
+
 
 function App() {
   
@@ -23,7 +21,7 @@ function App() {
           <Route path={'/7'} element={<Characters index={7}/>}/>
           <Route path={'/8'} element={<Characters index={8}/>}/>
           <Route path={'/9'} element={<Characters index={9}/>}/>
-          <Route path={'/10'} element={<Characters index={`10`}/>}/>
+          <Route path={'/10'} element={<Characters index={10}/>}/>
 
       </Routes>
     </div>
